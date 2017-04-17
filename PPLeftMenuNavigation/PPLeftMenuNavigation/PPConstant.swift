@@ -9,5 +9,5 @@
 import UIKit
 
 
-let PPBundle = Bundle(identifier: "PP.PPLeftMenuNavigation")
+let PPBundle = Bundle(identifier: "org.cocoapods.PPLeftMenuNavigation")
 let PPStr = UIStoryboard(name: "PPMain", bundle: PPBundle)
