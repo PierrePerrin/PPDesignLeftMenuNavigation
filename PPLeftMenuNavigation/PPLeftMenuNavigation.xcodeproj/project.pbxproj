@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F911CD7B1E969C4900ACF511 /* PPLeftMenuNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = F911CD791E969C4900ACF511 /* PPLeftMenuNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F911CD821E969C5C00ACF511 /* PPMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F911CD811E969C5C00ACF511 /* PPMain.storyboard */; };
 		F911CD841E969CCF00ACF511 /* PPMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911CD831E969CCF00ACF511 /* PPMenuContainerViewController.swift */; };
 		F911CD861E969D7D00ACF511 /* PPLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911CD851E969D7D00ACF511 /* PPLeftMenuViewController.swift */; };
@@ -15,12 +14,11 @@
 		F911CD8C1E96A0E600ACF511 /* PPLeftMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911CD8B1E96A0E600ACF511 /* PPLeftMenuTableViewCell.swift */; };
 		F911CD981E96B16800ACF511 /* PPConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911CD971E96B16800ACF511 /* PPConstant.swift */; };
 		F95DEF4E1E97F0B200289803 /* backGround@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F95DEF4D1E97F0B200289803 /* backGround@2x.jpg */; };
+		F96195011EA52FB8002B4CF8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F96195001EA52FB8002B4CF8 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F911CD761E969C4900ACF511 /* PPLeftMenuNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPLeftMenuNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F911CD791E969C4900ACF511 /* PPLeftMenuNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPLeftMenuNavigation.h; sourceTree = "<group>"; };
-		F911CD7A1E969C4900ACF511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F911CD811E969C5C00ACF511 /* PPMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PPMain.storyboard; path = ../../../../../Downloads/PPMain.storyboard; sourceTree = "<group>"; };
 		F911CD831E969CCF00ACF511 /* PPMenuContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPMenuContainerViewController.swift; sourceTree = "<group>"; };
 		F911CD851E969D7D00ACF511 /* PPLeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPLeftMenuViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +26,7 @@
 		F911CD8B1E96A0E600ACF511 /* PPLeftMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPLeftMenuTableViewCell.swift; sourceTree = "<group>"; };
 		F911CD971E96B16800ACF511 /* PPConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPConstant.swift; sourceTree = "<group>"; };
 		F95DEF4D1E97F0B200289803 /* backGround@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "backGround@2x.jpg"; sourceTree = "<group>"; };
+		F96195001EA52FB8002B4CF8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +66,7 @@
 				F911CD871E969E0600ACF511 /* PPLeftMenuItem.swift */,
 				F911CD851E969D7D00ACF511 /* PPLeftMenuViewController.swift */,
 				F911CD811E969C5C00ACF511 /* PPMain.storyboard */,
-				F911CD791E969C4900ACF511 /* PPLeftMenuNavigation.h */,
-				F911CD7A1E969C4900ACF511 /* Info.plist */,
+				F96195001EA52FB8002B4CF8 /* Info.plist */,
 				F911CD771E969C4900ACF511 /* Products */,
 			);
 			path = PPLeftMenuNavigation;
@@ -81,7 +79,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F911CD7B1E969C4900ACF511 /* PPLeftMenuNavigation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +144,7 @@
 			files = (
 				F95DEF4E1E97F0B200289803 /* backGround@2x.jpg in Resources */,
 				F911CD821E969C5C00ACF511 /* PPMain.storyboard in Resources */,
+				F96195011EA52FB8002B4CF8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
