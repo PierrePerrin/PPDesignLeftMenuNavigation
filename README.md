@@ -87,7 +87,7 @@ class MainViewController: PPMenuContainerViewController, PPLeftMenuDatasource {
 }
 ```
 
-###Personaliezation
+### Personalization
 
 Personalize the menu on the awakeFromNib().
 ```swift
