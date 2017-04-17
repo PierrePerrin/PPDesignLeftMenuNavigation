@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Left Menu View Controller-->
+        <scene sceneID="u0D-Tq-3UC">
+            <objects>
+                <viewController storyboardIdentifier="PPLeftMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ceD-fJ-Gcp" customClass="PPLeftMenuViewController" customModule="PPLeftMenuNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gAy-1b-rUy"/>
+                        <viewControllerLayoutGuide type="bottom" id="N1A-hS-07B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RGL-TB-pAD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KHi-mG-Ehx">
+                                <rect key="frame" x="20" y="33.5" width="200" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dav-Mc-XmK"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KHi-mG-Ehx" firstAttribute="centerY" secondItem="RGL-TB-pAD" secondAttribute="centerY" id="CVj-ZB-sXM"/>
+                            <constraint firstItem="KHi-mG-Ehx" firstAttribute="height" secondItem="RGL-TB-pAD" secondAttribute="height" multiplier="0.9" id="Gmr-MU-N98"/>
+                            <constraint firstItem="KHi-mG-Ehx" firstAttribute="leading" secondItem="RGL-TB-pAD" secondAttribute="leading" constant="20" id="IXO-rP-Req"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="KHi-mG-Ehx" id="kW1-LZ-64H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LH1-gj-ukA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261.60000000000002" y="-229.83508245877064"/>
+        </scene>
+    </scenes>
+</document>

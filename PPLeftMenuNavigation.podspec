@@ -14,6 +14,6 @@ s.author           = { '<YOUR NAME HERE>' => '<YOUR EMAIL HERE>' }
 s.source           = { :git => 'https://github.com/PierrePerrin/PPDesignLeftMenuNavigation.git', :tag => s.version.to_s }
 
 s.ios.deployment_target = '8.2'
-s.source_files = 'PPLeftMenuNavigation/PPLeftMenuNavigation/*.{swift,jpg}'
+s.source_files = 'PPLeftMenuNavigation/PPLeftMenuNavigation/*.{swift,jpg,storyboard}'
 
 end
