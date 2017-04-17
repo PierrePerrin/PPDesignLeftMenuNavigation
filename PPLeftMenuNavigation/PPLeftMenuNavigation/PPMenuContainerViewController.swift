@@ -22,7 +22,6 @@ open class PPMenuContainerViewController: UIViewController {
 
     var transitionTime = 0.3
     
-    
     internal var internalContainerView : UIView!
     internal var interalContentViewController : UIViewController!
     
@@ -31,12 +30,31 @@ open class PPMenuContainerViewController: UIViewController {
     var tapGesture : UITapGestureRecognizer!
    
     var blurTransitionView : UIVisualEffectView!
-    var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+    open var blurEffect : UIVisualEffect! = UIBlurEffect(style: UIBlurEffectStyle.light)
+    
+    open var backgroundBlurEffect : UIVisualEffect! = UIBlurEffect(style: UIBlurEffectStyle.dark)
+    var backgroundBlurView : UIVisualEffectView!
+    open var addBlurToBackground : Bool = false{
+        didSet{
+            
+            if addBlurToBackground {
+                if self.backgroundBlurView != nil && self.backgroundBlurView.superview == nil {
+                     self.view.insertSubview(backgroundBlurView, aboveSubview: self.backgroundImageView)
+                }
+            }
+            else{
+                self.backgroundBlurView.removeFromSuperview()
+            }
+            
+        }
+    }
     
     var backgroundImageView : UIImageView!
     open var backgroundImage : UIImage!{
         didSet{
-            self.backgroundImageView.image = backgroundImage
+            if self.backgroundImageView != nil{
+                self.backgroundImageView.image = backgroundImage
+            }
         }
     }
     
@@ -90,13 +108,19 @@ open class PPMenuContainerViewController: UIViewController {
 
     func addBackground(){
         
-        let image = UIImage.init(named: "backGround.jpg", in: PPBundle, compatibleWith: nil)
+        self.backgroundImage = self.backgroundImage == nil ? UIImage.init(named: "backGround.jpg", in: PPBundle, compatibleWith: nil) : self.backgroundImage
         let imageView = UIImageView(frame: self.view.bounds)
-        imageView.image = image
+        imageView.image = backgroundImage
         imageView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
         self.view.insertSubview(imageView, at: 0)
         self.backgroundImageView = imageView
+        
+        self.backgroundBlurView = UIVisualEffectView(effect: nil)
+        self.backgroundBlurView.frame = self.view.bounds
+        self.backgroundBlurView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        let value =  self.addBlurToBackground
+        self.addBlurToBackground = value
     }
     
     func addShadow(){
@@ -104,7 +128,7 @@ open class PPMenuContainerViewController: UIViewController {
         self.internalContainerView.layer.shadowColor = UIColor.black.cgColor
         self.internalContainerView.layer.shadowOffset = CGSize.zero
         self.internalContainerView.layer.shadowRadius = 7
-        self.internalContainerView.layer.shadowOpacity = 0.3
+        self.internalContainerView.layer.shadowOpacity = 0.1
     }
     
     //MARK: Menu Tansformations
@@ -226,6 +250,8 @@ extension PPMenuContainerViewController{
             self.contentViewController.view.layer.cornerRadius = 3
             self.internalContainerView.transform = self.containerTransform
             self.leftMenuViewController?.view.transform = .identity
+            self.backgroundImageView.transform = .identity
+            self.backgroundBlurView.effect = self.backgroundBlurEffect
             
         }, completion: nil)
     }
@@ -238,6 +264,8 @@ extension PPMenuContainerViewController{
             self.contentViewController.view.layer.cornerRadius = 0
             self.internalContainerView.transform = .identity
             self.leftMenuViewController?.view.transform = self.textTranslationTransform
+            self.backgroundImageView.transform = self.scaleTransform.inverted()
+            self.backgroundBlurView.effect = nil
             
         }, completion: {
             finished in

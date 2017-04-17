@@ -24,6 +24,8 @@ class MainViewController: PPMenuContainerViewController, PPLeftMenuDatasource {
         if let vc = self.viewController(forItem: menuItems.first!){
             self.contentViewController = vc
         }
+        self.backgroundImage = #imageLiteral(resourceName: "home-1")
+        self.addBlurToBackground = true
     }
     
     func viewController(forItem item : mainLeftMenuItem) -> UIViewController?{
