@@ -41,10 +41,17 @@ open class PPMenuContainerViewController: UIViewController {
     }
     
     open var contentViewController : UIViewController!{
-        didSet{
+        set{
+            if self.interalContentViewController == nil{
+                self.interalContentViewController = newValue
+            }
+            
             if self.isViewLoaded{
                 self.setContentViewController(viewController: contentViewController)
             }
+        }
+        get{
+            return self.interalContentViewController
         }
     }
     
@@ -61,7 +68,7 @@ open class PPMenuContainerViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setContentViewController(viewController:contentViewController)
+        self.setContentViewController(viewController:interalContentViewController)
         self.addGestureRecognizer()
     }
     
@@ -96,7 +103,7 @@ open class PPMenuContainerViewController: UIViewController {
         
         self.internalContainerView.layer.shadowColor = UIColor.black.cgColor
         self.internalContainerView.layer.shadowOffset = CGSize.zero
-        self.internalContainerView.layer.shadowRadius = 5
+        self.internalContainerView.layer.shadowRadius = 7
         self.internalContainerView.layer.shadowOpacity = 0.3
     }
     
@@ -180,7 +187,7 @@ extension PPMenuContainerViewController{
             
         }) { (finished) in
             
-            if self.interalContentViewController != nil{
+            if self.interalContentViewController != nil && self.interalContentViewController != viewController{
                 self.interalContentViewController.view.removeFromSuperview()
                 self.interalContentViewController.removeFromParentViewController()
             }
@@ -218,7 +225,6 @@ extension PPMenuContainerViewController{
             
             self.contentViewController.view.layer.cornerRadius = 3
             self.internalContainerView.transform = self.containerTransform
-            
             self.leftMenuViewController?.view.transform = .identity
             
         }, completion: nil)
