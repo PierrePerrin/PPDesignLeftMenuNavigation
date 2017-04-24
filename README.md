@@ -1,8 +1,9 @@
-# PPMusicImageShadow
+# PPDesignLeftMenuNavigation
 
 ## Synopsis
 
-PPMusicImageShadow is a view that imitates in real time the shadow blurred effect of iOS Music App.
+PPDesignLeftMenuNavigation is design left menu for iOS with a scale down and blur animation. This smooth animated left menu is pretty and realy easy to use. 
+(The blur animation is optional ;) )
 
 ![alt tag](https://github.com/PierrePerrin/PPDesignLeftMenuNavigation/blob/master/Screens/RX0Ntmg15oKo8.gif)
 ![alt tag](https://github.com/PierrePerrin/PPDesignLeftMenuNavigation/blob/master/Screens/hsGfPRX6aHwYM.gif)
